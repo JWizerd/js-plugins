@@ -13,10 +13,10 @@ function filterPortfolioCategories(trigger, categoryHeadline)  {
     // Remove hidden class if 'all-projects' is selected
     if (category == 'all-projects') {
       // show all projects. fadeIn gives all elms full opacity
-      $('.portfolio-showcase li').fadeIn('slow');
+      $('.portfolio-showcase li a').fadeIn('slow');
     } else {
       // since category does not equal all-projects show project based on category css class
-      $('.portfolio-showcase li').each(function(){
+      $('.portfolio-showcase li a').each(function(){
         if($(this).hasClass(category)) {
           //if the css class is equal to the category string above show li
           $(this).fadeIn('slow').show();
@@ -29,7 +29,7 @@ function filterPortfolioCategories(trigger, categoryHeadline)  {
 }
 
 function appendProjectDataOnHover() {
-  $('.portfolio-showcase li').hover(
+  $('.portfolio-showcase li a').hover(
     function() {
       var projectTitle = $(this).data('title');
       var projectDesc = $(this).data('desc');
@@ -54,6 +54,7 @@ function appendProjectDataOnHover() {
 }
 
 $(document).ready(function(){
+  // on hover over project li display overlay div containing data attributes
   appendProjectDataOnHover();
   // the filtering relies on the notion that categories have been manually set in the css class for each project
   filterPortfolioCategories();
