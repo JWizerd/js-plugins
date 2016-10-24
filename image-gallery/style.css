@@ -79,6 +79,31 @@ a.current {
   display: inline-block;
   margin-right: 2%;
   margin-bottom: 2%;
+  position: relative;
+}
+
+/* for hover projects container data */
+.overlay {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(59, 211, 222, 1);
+  top: 0;
+  height: 100%;
+  padding: 20px;
+  color: #f1f1f1;
+  display: none;
+}
+
+.overlay .project-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.overlay .project-desc {
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
 }
 
 li:last-child {

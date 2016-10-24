@@ -1,4 +1,4 @@
-$(document).ready(function(){
+function filterPortfolioCategories(trigger, categoryHeadline)  {
   $('nav a').on('click', function(e){
     e.preventDefault();
     $('nav a').removeClass('current');
@@ -26,4 +26,35 @@ $(document).ready(function(){
       });
     }
   });
+}
+
+function appendProjectDataOnHover() {
+  $('.portfolio-showcase li').hover(
+    function() {
+      var projectTitle = $(this).data('title');
+      var projectDesc = $(this).data('desc');
+
+      if (projectDesc == null || projectDesc == '') {
+        projectDesc = 'Click to Enlarge';
+      }
+
+      $(this).append('<div class="overlay"></div>');
+
+      var divOverlay = $('.overlay');
+      $(divOverlay).html(
+        '<h2 class="project-title">' + projectTitle + '</h2>' +
+        '<p class="project-desc">' + projectDesc + '</p>');
+
+      divOverlay.fadeIn(200);
+    },
+    function() {
+      $(this).find('.overlay').remove();
+    }
+  );
+}
+
+$(document).ready(function(){
+  appendProjectDataOnHover();
+  // the filtering relies on the notion that categories have been manually set in the css class for each project
+  filterPortfolioCategories();
 });
