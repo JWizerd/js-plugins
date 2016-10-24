@@ -1,0 +1,18 @@
+.faq-question, .faq-answer {
+  padding: 50px;
+  background-color: #666;
+  list-style: none;
+  font-family: Helvetica, sans-serif;
+  line-height: 30px;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 1px #333;
+  font-size: 25px;
+}
+
+.faq-answer {
+  background-color: #333;
+}
+
+.faq-question:hover {
+  cursor: pointer;
+}
