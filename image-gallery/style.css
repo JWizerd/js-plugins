@@ -30,6 +30,11 @@ h2 {
   line-height: 35px;
 }
 
+h3 {
+  color: #666;
+  line-height: 35px;
+}
+
 nav {
   display: table-cell;
   vertical-align: middle;
