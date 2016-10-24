@@ -50,7 +50,7 @@ nav ul li {
 }
 
 a {
-  color: turquoise;
+  color: papayaWhip;
   text-decoration: none;
 }
 
@@ -58,10 +58,15 @@ a:hover {
   text-decoration: underline;
 }
 
+a.current {
+  color: turquoise;
+}
+
 .gallery-header {
   width: 80%;
   display: block;
   margin: 0 auto 30px auto;
+  font-size: 30px;
 }
 
 .portfolio-showcase {
@@ -69,22 +74,22 @@ a:hover {
   margin: 0 auto;
 }
 
-.project {
+.portfolio-showcase li {
   width: 22%;
   display: inline-block;
   margin-right: 2%;
   margin-bottom: 2%;
 }
 
-.project:last-child {
+li:last-child {
   margin-right: 0;
 }
 
-.project:hover {
+li:hover {
   cursor: pointer;
 }
 
-.project img {
+.portfolio-showcase li img {
   width: 100%;
   display: block;
   margin: 0 auto;
