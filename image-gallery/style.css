@@ -49,27 +49,42 @@ nav ul li {
   font-weight: bold;
 }
 
+a {
+  color: turquoise;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.gallery-header {
+  width: 80%;
+  display: block;
+  margin: 0 auto 30px auto;
+}
+
 .portfolio-showcase {
   width: 80%;
   margin: 0 auto;
 }
 
-figure {
+.project {
   width: 22%;
   display: inline-block;
   margin-right: 2%;
   margin-bottom: 2%;
 }
 
-figure:last-child {
+.project:last-child {
   margin-right: 0;
 }
 
-figure:hover {
+.project:hover {
   cursor: pointer;
 }
 
-figure img {
+.project img {
   width: 100%;
   display: block;
   margin: 0 auto;
