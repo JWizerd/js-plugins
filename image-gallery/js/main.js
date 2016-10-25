@@ -13,10 +13,10 @@ function filterPortfolioCategories(trigger, categoryHeadline)  {
     // Remove hidden class if 'all-projects' is selected
     if (category == 'all-projects') {
       // show all projects. fadeIn gives all elms full opacity
-      $('.portfolio-showcase li a').fadeIn('slow');
+      $('.portfolio-showcase li').fadeIn('slow');
     } else {
       // since category does not equal all-projects show project based on category css class
-      $('.portfolio-showcase li a').each(function(){
+      $('.portfolio-showcase li').each(function(){
         if($(this).hasClass(category)) {
           //if the css class is equal to the category string above show li
           $(this).fadeIn('slow').show();
