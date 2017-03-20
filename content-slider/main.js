@@ -15,7 +15,7 @@ $(document).ready(function(){
 function SliderWidget(slideElm, styleClass, button, intervalSpeed){
   initializeSlider(slideElm, styleClass);
   sliderClickTransition(slideElm, styleClass, button);
-  sliderAutoSlide(styleClass, slideElm, intervalSpeed);
+  // sliderAutoSlide(styleClass, slideElm, intervalSpeed); TURN ON FOR AUTO SLIDE
 }
 
 // initialize first slider

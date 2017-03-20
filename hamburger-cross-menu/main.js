@@ -1,3 +1,5 @@
+// jQuery IIFE function for Wordpress Implementation
+
 (function($) {
 
   function headerAnimate() {
