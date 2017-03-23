@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, "sans-serif";
+}
+
+body {
+  width: 100%;
+}
+
+.tab {
+  padding: 18px 40px;
+  font-size: 18px;
+  border: none;
+  background-color: #888;
+  margin-bottom: -16px;
+}
+
+.tab:focus {
+  outline: 0;
+}
+
+.tabs {
+  width: 50%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tab-info {
+  background-color: #ddd;
+  padding: 30px;
+  display: none;
+  height: 500px;
+}
+
+.active {
+  background-color: #ddd;
+}
+
+.show-tab {
+  display: block;
+}
