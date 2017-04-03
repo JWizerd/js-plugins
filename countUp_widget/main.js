@@ -4,6 +4,7 @@
 function Counter(className) {
   this.className = className;
   this.total = parseInt($(this.className).data('count'));
+  this.setInitialValue = function() { $(this.className).html(0); };
   this.countUp = function() {
     $(this.className).prop('Count', 0).animate(
       {
@@ -13,12 +14,17 @@ function Counter(className) {
         duration: 1500,
         easing: 'swing',
         step: function () {
-        $(this).text(Math.ceil(this.Count).toLocaleString());
+        $(this).text('$' + Math.ceil(this.Count).toLocaleString());
       }
     });
   };
 }
 
-var NewCounter = new Counter('.counter');
-
-NewCounter.countUp();
+$(document).ready(function() {
+  $('.counter').html(0);
+  setTimeout(function() {
+    var NewCounter = new Counter('.counter');
+    NewCounter.setInitialValue();
+    NewCounter.countUp();
+  }, 1000)
+});
