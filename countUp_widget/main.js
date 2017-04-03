@@ -21,10 +21,9 @@ function Counter(className) {
 }
 
 $(document).ready(function() {
-  $('.counter').html(0);
-  setTimeout(function() {
-    var NewCounter = new Counter('.counter');
-    NewCounter.setInitialValue();
+  var NewCounter = new Counter('.counter');
+  NewCounter.setInitialValue();
+  setTimeout(function(){
     NewCounter.countUp();
-  }, 1000)
+  }, 1000);
 });
