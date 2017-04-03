@@ -1,5 +1,4 @@
 (function(){ //IIFE
-
   $('document').ready(function() {
 
     $('.tab-info').first().addClass('show-tab');
@@ -19,5 +18,4 @@
     });
 
   });
-
 }());
