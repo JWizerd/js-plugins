@@ -2,11 +2,12 @@
 // jQuery Animate Explained https://www.sitepoint.com/guide-jquery-animate-method/
 
 function Counter(className) {
+  // We utilize the self var so other methods within the class have access to it. Similar to a class variable in ruby.
+  var self = this;
   this.className = className;
   this.total = parseInt($(this.className).data('count'));
   this.setInitialValue = function() { $(this.className).html(0); };
   this.countUp = function() {
-    debugger;
     $(this.className).prop('Count', 0).animate(
       {
         Count: this.total
@@ -18,16 +19,18 @@ function Counter(className) {
         $(this).text('$' + parseInt(this.Count).toLocaleString());
       },
         complete: function(){
-          $(this).html(this.Count.toLocaleString);
+          $(this).html("$" + this.Count.toLocaleString());
         }
     });
   };
+  this.execute = function() {
+    self.setInitialValue();
+    setTimeout(function(counter){
+      self.countUp(); }, 1000);
+  }
 }
 
 $(document).ready(function() {
   var NewCounter = new Counter('.counter');
-  NewCounter.setInitialValue();
-  setTimeout(function(){
-    NewCounter.countUp();
-  }, 1000);
+  NewCounter.execute();
 });
