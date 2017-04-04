@@ -6,16 +6,20 @@ function Counter(className) {
   this.total = parseInt($(this.className).data('count'));
   this.setInitialValue = function() { $(this.className).html(0); };
   this.countUp = function() {
+    debugger;
     $(this.className).prop('Count', 0).animate(
       {
         Count: this.total
       },
       {
-        duration: 1500,
+        duration: 2500,
         easing: 'swing',
         step: function () {
-        $(this).text('$' + Math.ceil(this.Count).toLocaleString());
-      }
+        $(this).text('$' + parseInt(this.Count).toLocaleString());
+      },
+        complete: function(){
+          $(this).html(this.Count.toLocaleString);
+        }
     });
   };
 }
